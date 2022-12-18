@@ -6,6 +6,7 @@ def get_location(ip_address):
 	url = f"http://ipapi.com/{ip_address}/json/"
 	response = requests.get(url)
 	data = response.json()
+	
 	city = data["city"]
 	region = data["region"]
 	country = data["country_name"]
